@@ -19,7 +19,7 @@ words="_words.txt"
 space="_"
 destdir=/var/opt/iawordcounts
 
-#grab needed file from the Internet Archive
+#grab needed files from the Internet Archive
 wget "https://archive.org/download/$arkid/$arkid$text"
 wget -O "$destdir/date.txt" "http://archive.org/advancedsearch.php?q=$arkid&fl%5B%5D=date&page=1&output=json"
 
