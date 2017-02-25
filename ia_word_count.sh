@@ -17,7 +17,7 @@ destdir=/var/opt/iawordcounts
 
 wget "https://archive.org/download/$arkid/$arkid$text"
 
-wget -O "$destdir/date.txt" "http://archive.org/advancedsearch.php?q=xt7jsx645m27&fl%5B%5D=date&page=1&output=json"
+wget -O "$destdir/date.txt" "http://archive.org/advancedsearch.php?q=$arkid&fl%5B%5D=date&page=1&output=json"
 
 sed -i -E "s/.*docs//" $destdir/date.txt
 sed -i -E "s/.*:\"//" $destdir/date.txt
