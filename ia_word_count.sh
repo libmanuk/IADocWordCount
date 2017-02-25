@@ -2,7 +2,6 @@
 # @copyright Copyright 2017 Eric C. Weig 
 
 #read commandline variables
-
 arkid=$1
 coll=$2
 
