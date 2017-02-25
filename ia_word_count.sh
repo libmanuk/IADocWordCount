@@ -1,7 +1,14 @@
 #!/bin/bash
 # @copyright Copyright 2017 Eric C. Weig 
 
-#read commandline variables
+#check to see if there are 2 arguments given
+if [[ $# != 2 ]] ; then 
+    echo 'no arguments povided'
+    echo 'process failed'
+    exit 1
+fi
+
+#store commandline arguments as variables
 arkid=$1
 coll=$2
 
