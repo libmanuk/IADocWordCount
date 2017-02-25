@@ -19,8 +19,10 @@ words="_words.txt"
 space="_"
 destdir=/var/opt/iawordcounts
 
-#grab needed files from the Internet Archive
+#grab needed file from the Internet Archive
 wget "https://archive.org/download/$arkid/$arkid$text"
+
+#generate JSON file holding date metadata via Internet Archive API
 wget -O "$destdir/date.txt" "http://archive.org/advancedsearch.php?q=$arkid&fl%5B%5D=date&page=1&output=json"
 
 #parse the JSON date file to extract only the date and store as variable
