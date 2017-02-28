@@ -12,16 +12,17 @@ fi
 coll=$1
 
 #set variables for path to files
-dir=/var/opt/iawordcounts/totals
+dir=/var/opt/iawordcounts
 name=_merged_file.txt
 total=_sum.txt
+tdir=totals
 
 #merge all files for a title together
-cat $dir/$coll/* > $dir/$coll$name
+cat $dir/$coll/* > $dir/$tdir/$coll$name
 
 #perform sumation of numbers in the merged file
-sum=(awk '{ sum += $1 } END { print sum }' $dir/$coll$name)
+cat $dir/$tdir/$coll$name
+sum=0; while read num ; do sum=$(($sum + $num)); done < $dir/$tdir/$coll$name
 
 #save file with sumation
-echo "$sum" > "$dir/$coll$total"
-
+echo "$sum" > "$dir/$tdir/$coll$total"
