@@ -22,3 +22,6 @@ Processing:
 1: Count the number of words in the djvu.txt file.
 
 2: Store the word count in a file that is named 'grouping_date_identifier_words.txt' 
+
+## License
+This software on this site is provided "as-is," without any express or implied warranty. In no event shall libmanuk be held liable for any damages arising from the use of the software.
